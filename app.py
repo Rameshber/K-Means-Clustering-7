@@ -25,17 +25,17 @@ def predict():
     
   predict = model.predict([[income,score ]])
   if predict==[0]:
-    result="Customer is careless"
+    result="Customer is Careless"
 
   elif predict==[1]:
-    result="Customer is standard"
+    result="Customer is Standard"
   elif predict==[2]:
-    result="Customer is Target"
+    result="Customer is Regular"
   elif predict==[3]:
-    result="Customer is careful"
+    result="Customer is Careful"
 
   else:
-    result="Custmor is sensible"
+    result="Custmor is Sensible"
     
         
   return render_template('index.html', prediction_text='Model  has predicted  : {}'.format(result))
